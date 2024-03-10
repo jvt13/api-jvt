@@ -29,10 +29,9 @@ app.set('views', path.join(__dirname, '/pages'));
 const diretorioAtual = __dirname;
 const pastaRaiz = path.resolve(diretorioAtual);
 
-//const rota1 = require('../gerenciador_assinatura/index');
+const rota1 = require('../gerenciador_assinatura/index');
+//app.use('/contrato', rota1);
 const rota2 = require('../api_agenda/index');
-
-//app.use('/rota1', rota1);
 app.use('/agenda', rota2);
 
 app.get('/', (req,res) =>{
